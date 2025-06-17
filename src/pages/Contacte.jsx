@@ -35,7 +35,7 @@ export function Contact({text,langue,setlangue}) {
       if (!res.ok) {
         setNotification({
           type: "error",
-          message: `❌ Erreur : ${data.message}`,
+          message: ` Erreur : ${data.message}`,
         })
         hideNotification()
         return
