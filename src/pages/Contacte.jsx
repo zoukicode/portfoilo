@@ -13,7 +13,7 @@ export function Contact({text,langue,setlangue}) {
 
   const form = useRef()
 
-  
+  const host = import.meta.env.VITE_API_URL
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -22,7 +22,7 @@ export function Contact({text,langue,setlangue}) {
 
     try {
       // 1. Enregistrement dans la base
-      const res = await fetch("http://localhost:3000/api/contact", {
+      const res = await fetch(`${host}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
