@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .icone-conpetence{
+    width: 60px;height: 60px; object-fit: contain;
+  }
+}
+
+body {
+  margin: 0;
+  color:white;
+  background-color: #071129;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+ul li{
+  cursor: pointer;
+  opacity: 0.7;
+  transition: ease-in-out 0.5s;
+}
+ul li a{
+  text-decoration: none;
+}
+ul li:hover{opacity: 1;}
+p {
+  font-family: 'Inter', sans-serif;     /* Police moderne */
+  font-size: 1rem;                  /* 18px pour une bonne lisibilité */
+  line-height: 1.5rem;                 /* Espace entre les lignes */
+  color: #e2e8f0;                       /* Texte gris clair (idéal sur fond sombre) */
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #263b7a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none;
+}
+button:hover {
+  border-color: #646cff;
+}
+
