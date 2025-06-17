@@ -20,7 +20,7 @@ export function Pied({Version, text,langue,setlangue}){
              <div class="flex flex-col items-center">
                 <div className="flex items-center">
                                   <img className='w-20' src={logo} alt="logo app"/>
-                                 <h1 class="font-bold text-3xl font-[cursive] italic">Zoukicode</h1>
+                                 <h1 class="font-bold text-3xl  italic">Zoukicode</h1>
                                 </div>
             <p class="opacity-[0.5] text-[13px]">@copy, 2025</p>
         </div>
