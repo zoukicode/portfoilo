@@ -13,6 +13,8 @@ export function Contact({text,langue,setlangue}) {
 
   const form = useRef()
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
