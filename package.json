@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start":"cd Backend node index.js"
+    "start": "node src/Backend/index.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
