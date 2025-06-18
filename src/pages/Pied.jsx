@@ -6,7 +6,7 @@ export function Pied({Version, text,langue,setlangue}){
   };
     return(
         <div>
-             <footer class="flex flex-col gap-10 justify-around items-center pb-10 sm:flex-row">
+             <footer class="text-base flex flex-col gap-10 justify-around items-center pb-10 sm:flex-row">
                 <div>
                 <Social/>
             </div>
@@ -22,7 +22,7 @@ export function Pied({Version, text,langue,setlangue}){
                                   <img className='w-20' src={logo} alt="logo app"/>
                                  <h1 class="font-bold text-3xl  italic">Zoukicode</h1>
                                 </div>
-            <p class="opacity-[0.5] text-[13px]">@copy, 2025</p>
+            <p class="opacity-[0.5] ">@copy, 2025</p>
         </div>
             
     </footer>

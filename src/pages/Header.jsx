@@ -65,7 +65,7 @@ export default function Header({Version, text, langue, setLangue }){
                           ))}
                             </ul>
 
-                   <ul className={`${click === 'visible' ? ' left-[0] ' : ' left-[-100%]'}  transition-all ease-in-out duration-500 items-center text-justify  gap-20 justify-center lg:hidden flex flex-col fixed top-0 left-[-100%]   w-[100%] h-[100vh]  bg-black/95`}>
+                   <ul className={`${click === 'visible' ? ' left-[0] ' : ' left-[-100%]'}  transition-all ease-in-out duration-500 items-center text-justify  gap-20 justify-center lg:hidden flex flex-col fixed top-0 left-[-100%]  md:w-[50%]  w-[100%] h-[100vh]  bg-black/95`}>
                 {text.nav.map((lienNav,i)=>(
                             <li key={i} onClick={()=>{setclick('hidden') ; scrollToSection(Version.section[i])}}>{lienNav}</li>
                           ))}
