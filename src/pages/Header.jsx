@@ -54,18 +54,18 @@ export default function Header({Version, text, langue, setLangue }){
        
 
             {/* navigation */}
-            <nav className={`${click === 'visible' ? 'fixed' : 'block'} flex w-[90%] mx-auto justify-between py-5 z-999 items-center` }>
+            <nav className={`${click === 'visible' ? 'fixed' : 'block'} text-base z-99 flex w-[90%] mx-auto justify-between py-5  items-center` }>
                 <div className="flex items-center">
                   <img className='w-20' src={logo} alt="logo app"/>
                   <h1  className={` font-bold text-[30px] `}>Zoukicode</h1>
                 </div>
-                      <ul  class={` md:flex hidden   gap-20 z-50 }`}>
+                      <ul  class={` lg:flex hidden   gap-20 z-50 }`}>
                           {text.nav.map((e,i)=>(
                             <li key={i} onClick={()=>scrollToSection(Version.section[i])}>{e}</li>
                           ))}
                             </ul>
 
-                   <ul className={`${click === 'visible' ? ' left-[0] ' : ' left-[-100%]'}  transition-all ease-in-out duration-500 items-center text-justify  gap-20 justify-center md:hidden flex flex-col fixed top-0 left-[-100%]   w-[100%] h-[100vh]  bg-black/95`}>
+                   <ul className={`${click === 'visible' ? ' left-[0] ' : ' left-[-100%]'}  transition-all ease-in-out duration-500 items-center text-justify  gap-20 justify-center lg:hidden flex flex-col fixed top-0 left-[-100%]   w-[100%] h-[100vh]  bg-black/95`}>
                 {text.nav.map((lienNav,i)=>(
                             <li key={i} onClick={()=>{setclick('hidden') ; scrollToSection(Version.section[i])}}>{lienNav}</li>
                           ))}
@@ -104,15 +104,15 @@ export default function Header({Version, text, langue, setLangue }){
                 initial={{ opacity: 0, scale:0}}  // état de départ
       animate={{ opacity: 1, scale:1}}    // état final
       transition={{ duration: 1 }}    // durée de l'animation
-               class="relative mb-5 md:mb-20 rounded-[47%] md:w-2/4 ">
-  <div class="absolute bottom-0 h-80 md:h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
-      <img src={zoukiImage}  class="relative object-cover  z-20 md:w-100 w-[90%] h-90 md:h-100 rounded-[47%]" alt="zoukicode image"/>
+               class="relative mb-5 lg:mb-20 rounded-[47%] md:w-2/4 ">
+  <div class="absolute bottom-0 h-80 lg:h-90 w-[90%] lg:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
+      <img src={zoukiImage}  class="relative object-cover  z-20 lg:w-100 w-[90%] h-90 lg:h-100 rounded-[47%]" alt="zoukicode image"/>
 </motion.div>
                <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut" }}
-      className="flex flex-col gap-2 md:w-2/4"
+      className="flex flex-col gap-2 lg:w-2/4"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
