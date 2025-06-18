@@ -77,7 +77,7 @@ export function Contact({text,langue,setlangue}) {
       console.error(error)
       setNotification({
         type: "error",
-        message: "❌ Erreur de connexion au serveur",
+        message: "Erreur de connexion au serveur",
       })
       hideNotification()
     }

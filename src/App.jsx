@@ -7,28 +7,20 @@ import { Propos } from './pages/Propos.jsx'
 import { Pied } from './pages/Pied.jsx'
 import { useRef, useState } from 'react'
 import Version from './pages/Langue'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {Dashboard} from './pages/Dashboard.jsx'
 function App() {
    const [langue, setLangue] = useState('FR');
  const text = Version[langue]
 
   return (
-   
-
     <section class="flex flex-col gap-20">
-       <Router>
-        <Routes><Route path="/zouki@admin" element={<Dashboard />} /></Routes>
-       </Router>
-
-      <div>
+        <div>
       <Header Version={Version} text={text} langue={langue} setLangue={setLangue}/>
     </div>
     <div>
       <Projets text={text} langue={langue} setLangue={setLangue}/>
     </div>
     <section class=" lg:flex-row flex justify-between flex-col gap-10 items-center w-[90%] mx-auto">
-      <div class=" flex flex-col gap-10">
+      <div class=" flex flex-col gap-10  w-[100%]">
         <div><Competence text={text} langue={langue} setLangue={setLangue}/></div>
       <div><Propos text={text} langue={langue} setLangue={setLangue}/></div>
       </div>

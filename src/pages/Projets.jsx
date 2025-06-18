@@ -5,7 +5,7 @@ export function Projets({ text, langue, setLangue }){
     return(
         <section  id="projets" class="relative">
           {/* svg style */}
-          <div class="absolute bottom-[-170px] right-0 opacity-50">
+          <div class="z-[-1] absolute bottom-[-170px] right-0 opacity-50">
             <svg width="1285" height="932" viewBox="0 0 1285 932" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_18_2)">
 <rect x="1285.45" y="693" width="167.821" height="311.839" transform="rotate(40 1285.45 693)" fill="url(#paint0_linear_18_2)" fill-opacity="0.3"/>
@@ -23,7 +23,7 @@ export function Projets({ text, langue, setLangue }){
 </svg>
           </div>
 
-          <section class="flex flex-col gap-10 w-[90%] mx-auto">
+          <section class="flex flex-col gap-10 w-[90%] mx-auto overflow-x-hidden">
             <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             viewport={{amount:0.5}}
@@ -37,8 +37,8 @@ export function Projets({ text, langue, setLangue }){
             viewport={{amount:0.5}}
             whileInView={{ opacity: 1, x: 0}}
         transition={{ ease:"easeInOut", duration: 0.8 }}
-            class="lg:w-[50%] w-[100%] mx auto">
-              <p>{text.projets.paragraphe}Voici quelques projets que j’ai réalisés récemment. Chaque application reflète mon souci du détail, ma maîtrise technique et ma volonté de répondre à des besoins réels.</p>
+            class="lg:w-[50%] w-[100%] overflow-x-hidden">
+              <p>{text.projets.paragraphe}</p>
             <p>Chaque projet est le fruit d’une recherche d’efficacité, de performance et d’une bonne expérience utilisateur.</p>
             </motion.div>
             <div class="lg:flex-row  flex flex-col justify-between gap-30 items-center">

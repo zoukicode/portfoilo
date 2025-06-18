@@ -35,7 +35,7 @@ export default function Header({Version, text, langue, setLangue }){
 
             {/* deuxieme svg */}
             <div class=" absolute left-0 bottom-[-20px]  z-[-1] "  >
-                <div class=" position absolute left-15 bottom-[-150px] bg-cyan-400 blur-xl opacity-7 w-[300px] h-[200px] rounded-[50%]"></div>
+                <div class="z-[-1] position absolute left-15 bottom-[-150px] bg-cyan-400 blur-xl opacity-7 w-[100px] h-[200px] rounded-[50%]"></div>
        
 <svg class="w-100%" height="376"  fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_14_3)">
@@ -52,7 +52,7 @@ export default function Header({Version, text, langue, setLangue }){
 
             {/* troisieme div a gauche */}
 
-            <div class="absolute right-0 top-0">
+            <div class="z-[-1] absolute right-0 top-0">
 <svg width="w-100"  height="376" fill="none"  xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_15_8)">
 <rect x="365" y="-0.12677" width="167.821" height="311.839" transform="rotate(-40 365 -0.12677)" fill="url(#paint0_linear_15_8)" fill-opacity="0.3"/>
@@ -88,7 +88,8 @@ export default function Header({Version, text, langue, setLangue }){
                           ))}
                 </ul>
                 {/* selection de la langue */}
-       <div className={`${click === 'visible' ? 'block' : ' hidden'} relative flex z-[999] md:block`}>
+      <section className={`${click === 'visible' ? 'block absolute left-3' : ' hidden'} md:block`}>
+         <div className={`relative flex z-[999]`}>
   <select
     value={langue}
     onChange={handleChange}
@@ -103,6 +104,7 @@ export default function Header({Version, text, langue, setLangue }){
     ▼
   </div>
 </div>
+      </section>
 
                 {/* button menu */}
                 <div onClick={()=>{if(click === 'hidden' ) {setclick('visible')}else{setclick('hidden')}}} id="menu" class="md:hidden flex flex-col gap-1 z-98 cursor-pointer">
@@ -120,8 +122,8 @@ export default function Header({Version, text, langue, setLangue }){
       animate={{ opacity: 1, scale:1}}    // état final
       transition={{ duration: 1 }}    // durée de l'animation
                class="relative mb-20 rounded-[47%] md:w-2/4 ">
-  <div class="absolute bottom-0 h-90 w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
-      <img src={zoukiImage}  class="relative   z-20 w-100 h-100 rounded-[47%]" alt="zoukicode image"/>
+  <div class="absolute bottom-0 h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
+      <img src={zoukiImage}  class="relative   z-20 md:w-100 w-[90%] h-100 rounded-[47%]" alt="zoukicode image"/>
 </motion.div>
                <motion.div
       initial={{ opacity: 0 }}

@@ -6,9 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Router } from "express";
 
-export default function Dashboard() {
+export  function Dashboard() {
 
   const [projects, setProjects] = useState([
     { id: 1, title: "Portfolio", date: "2024-05-01" },
