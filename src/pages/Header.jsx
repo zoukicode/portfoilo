@@ -90,7 +90,7 @@ export default function Header({Version, text, langue, setLangue }){
       </section>
 
                 {/* button menu */}
-                <div onClick={()=>{if(click === 'hidden' ) {setclick('visible')}else{setclick('hidden')}}} id="menu" class="md:hidden flex flex-col gap-1 z-98 cursor-pointer">
+                <div onClick={()=>{if(click === 'hidden' ) {setclick('visible')}else{setclick('hidden')}}} id="menu" class="lg:hidden flex flex-col gap-1 z-98 cursor-pointer">
                     <div class={`${click === 'visible' ? 'rotate-60' : ''} h-1 w-6 bg-white transition-all ease-in-out duration-500`}></div>
                     <div class="h-1 w-6 bg-white"></div>
                     <div class={`${click === 'visible' ? 'rotate-[-60deg]' : ''} h-1 w-6 bg-white transition-all ease-in-out duration-500`}></div>
