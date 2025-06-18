@@ -27,7 +27,7 @@ const Version = {
       service:
         'Je propose une gamme de services adaptés à vos besoins digitaux :',
       type: [
-        'Développement logiciel :',
+        'Développement logiciel ',
         'Applications Android et iOS',
         'Sites vitrines, e-commerces et applications web sur mesure',
         'Mises à jour, corrections de bugs et améliorations de performances',
@@ -72,7 +72,7 @@ const Version = {
         'My goal is to create innovative, accessible, and high-performance digital solutions.',
       service: 'I offer a range of services tailored to your digital needs:',
       type: [
-        'Software Development:',
+        'Software Development',
         'Android and iOS applications',
         'Showcase websites, e-commerce platforms, and custom web applications',
         'Updates, bug fixes, and performance improvements',
