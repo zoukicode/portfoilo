@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import projetImage from '/projets/Capture d’écran (135).png';
+import FeminiteImg from '/projets/feminite.png';
 import Header from './Header';
 
 export function Projets({ text, langue, setLangue }) {
@@ -13,7 +14,7 @@ export function Projets({ text, langue, setLangue }) {
       gitup:""
     },
     {
-      img: projetImage,
+      img: FeminiteImg,
       nom: "Féminité Sans Abri",
       description: "SIte web de Féminité Sans Abri  qui lutte contre la précarité hygiénique chez les femmes sans domicile ou en grande difficulté..",
       lien:"https://zoukicode.vercel.app/",
