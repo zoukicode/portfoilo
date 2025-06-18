@@ -7,14 +7,20 @@ import { Propos } from './pages/Propos.jsx'
 import { Pied } from './pages/Pied.jsx'
 import { useRef, useState } from 'react'
 import Version from './pages/Langue'
+import { Router } from 'express'
+import {Dashboard} from './pages/Dashboard.jsx'
 function App() {
-
    const [langue, setLangue] = useState('FR');
  const text = Version[langue]
 
   return (
+   
 
     <section class="flex flex-col gap-20">
+       <Router>
+        <Routes><Route path="/zouki@admin" element={<Dashboard />} /></Routes>
+       </Router>
+
       <div>
       <Header Version={Version} text={text} langue={langue} setLangue={setLangue}/>
     </div>
