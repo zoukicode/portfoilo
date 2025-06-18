@@ -105,8 +105,8 @@ export default function Header({Version, text, langue, setLangue }){
       animate={{ opacity: 1, scale:1}}    // état final
       transition={{ duration: 1 }}    // durée de l'animation
                class="relative mb-5 md:mb-20 rounded-[47%] md:w-2/4 ">
-  <div class="absolute bottom-0 h-90 md:h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
-      <img src={zoukiImage}  class="relative object-cover  z-20 md:w-100 w-[90%] h-100 md:h-100 rounded-[47%]" alt="zoukicode image"/>
+  <div class="absolute bottom-0 h-80 md:h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
+      <img src={zoukiImage}  class="relative object-cover  z-20 md:w-100 w-[90%] h-90 md:h-100 rounded-[47%]" alt="zoukicode image"/>
 </motion.div>
                <motion.div
       initial={{ opacity: 0 }}

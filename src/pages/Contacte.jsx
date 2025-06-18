@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import emailjs from "emailjs-com"
-import { useState, useRef } from "react"
+import { useState, useRef, lazy } from "react"
 
 export function Contact({text,langue,setlangue}) {
   const idee = text.contact.paragraphe
@@ -12,6 +12,7 @@ export function Contact({text,langue,setlangue}) {
   const [notification, setNotification] = useState(null)
 
   const form = useRef()
+
 
   const host = import.meta.env.VITE_API_URL
 

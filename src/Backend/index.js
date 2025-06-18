@@ -9,6 +9,16 @@ app.use(cors())
 
 const saveContact = "INSERT INTO contacts (id,nom_client, sujet, email) VALUES (1,?,?,?)"
 
+//page d'acceuill du serveur
+app.get('/', (req, res) => {
+  res.send(`
+    <html>
+      <head><title>Accueil</title></head>
+      <body><h1>Bienvenue</h1></body>
+    </html>
+  `);
+});
+
 app.post('/api/contact', (req, res) => {
     const { nom, sujet, email } = req.body
 
@@ -27,5 +37,5 @@ app.post('/api/contact', (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('Serveur à l\'écoute sur http://localhost:3000')
+    console.log('Serveur démarer')
 })
