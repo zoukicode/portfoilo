@@ -17,7 +17,7 @@ export function Social(){
             viewport={{amount:0.5}}
             whileInView={{ opacity: 1, y: 0}}
         transition={{ ease:"easeInOut", duration: 0.8 }} href="https://www.linkedin.com/in/marzouk-agrignan-05393029a/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 30 30" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#263b7a"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 16V11M12 16V14M12 11V14M16 16V14C16 12.5 15.5 11 14 11C12.5 11 12 12.5 12 14M7.99 8H8M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="#263b7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <svg viewBox="0 0 25 25" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#263b7a"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 16V11M12 16V14M12 11V14M16 16V14C16 12.5 15.5 11 14 11C12.5 11 12 12.5 12 14M7.99 8H8M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="#263b7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             </motion.a>
         </div>
     )
