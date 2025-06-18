@@ -23,7 +23,7 @@ const Version = {
       introduction:
         'Développeur Web & Logiciel basé à Lomé (Togo), je suis passionné par les technologies modernes et le développement d’applications sur mesure. Grâce à une solide expérience en programmation, je propose des solutions robustes, innovantes et parfaitement adaptées aux besoins spécifiques de chaque client.',
       objectif:
-        'Mon ambition : transformer vos idées en outils numériques puissants, intuitifs et durables.',
+        ' transformer vos idées en outils numériques puissants, intuitifs et durables.',
       service:
         'Je vous accompagne dans tous vos projets digitaux à travers une gamme de services personnalisés :',
       type: [
@@ -69,7 +69,7 @@ const Version = {
       introduction:
         'Based in Lomé (Togo), I’m a passionate Web & Software Developer with a strong background in building custom applications tailored to client needs. I thrive on challenges and take pride in delivering innovative, reliable, and user-friendly solutions.',
       objectif:
-        'My goal: turn your ideas into powerful, intuitive, and lasting digital tools.',
+        ' turn your ideas into powerful, intuitive, and lasting digital tools.',
       service:
         'I offer a wide range of tailored services to support your digital transformation:',
       type: [

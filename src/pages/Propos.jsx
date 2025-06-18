@@ -14,11 +14,13 @@ export function Propos({text,langue,setLangue}){
             <p class="before:rounded-[50%] relative before:w-5 before:h-5 before:absolute before:bg-[#0EA5E9] before:content-[''] before:left-[-27px]">
 {text.propos.introduction}
  </p>
-<p class="before:rounded-[50%] relative before:w-5 before:h-5 before:absolute before:bg-[#0EA5E9] before:content-[''] before:left-[-27px]">
-    {text.propos.objectif}
-    </p>
+<div class="before:rounded-[50%] relative before:w-5 before:h-5 before:absolute before:bg-[#0EA5E9] before:content-[''] before:left-[-27px]">
+    <h2 className="font-bold">Mon Ambition</h2>
+    <p>{text.propos.objectif}</p>
+    </div>
 
 <div className="before:rounded-[50%] relative before:w-5 before:h-5 before:absolute before:bg-[#0EA5E9] before:content-[''] before:left-[-27px]">
+  <h2 className="font-bold">Mes Services</h2>
   <p>{text.propos.service}</p>
   {text.propos.type.map((v, i) => (
     <p class="pl-5" key={i}>{v}</p>
