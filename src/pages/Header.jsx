@@ -35,7 +35,7 @@ export default function Header({Version, text, langue, setLangue }){
 
             {/* deuxieme svg */}
             <div class=" absolute left-0 bottom-[-20px]  z-[-1] "  >
-                <div class="z-[-1] position absolute left-15 bottom-[-150px] bg-cyan-400 blur-xl opacity-7 w-[100px] h-[200px] rounded-[50%]"></div>
+                <div class="z-[-1] position absolute left-15 bottom-[-150px] bg-cyan-400 blur-xl opacity-7 w-[200px] h-[200px] rounded-[50%]"></div>
        
 <svg class="w-100%" height="376"  fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_14_3)">
@@ -50,25 +50,8 @@ export default function Header({Version, text, langue, setLangue }){
 </svg>
             </div>
 
-            {/* troisieme div a gauche */}
-
-            <div class="z-[-1] absolute right-0 top-0">
-<svg width="w-100"  height="376" fill="none"  xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_15_8)">
-<rect x="365" y="-0.12677" width="167.821" height="311.839" transform="rotate(-40 365 -0.12677)" fill="url(#paint0_linear_15_8)" fill-opacity="0.3"/>
-<rect x="440.704" y="-8.47725" width="88.5421" height="224.218" transform="rotate(-40 440.704 -8.47725)" fill="#101C48" fill-opacity="0.31" stroke="#263B7A"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear_15_8" x1="532.821" y1="142.626" x2="381.13" y2="104.606" gradientUnits="userSpaceOnUse">
-<stop stop-color="#263B7A"/>
-<stop offset="1" stop-color="#101C48"/>
-</linearGradient>
-<clipPath id="clip0_15_8">
-<rect width="562" height="376" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-            </div>
+       
+       
 
             {/* navigation */}
             <nav className={`${click === 'visible' ? 'fixed' : 'block'} flex w-[90%] mx-auto justify-between py-5 z-999 items-center` }>
@@ -114,16 +97,16 @@ export default function Header({Version, text, langue, setLangue }){
                 </div>
             </nav>
 
-            <div class="lg:flex-row flex justify-around flex-col  z-99 items-center h-[100%] w-[90%] mx-auto">
+            <div class="lg:flex-row flex justify-around flex-col  items-center h-[100%] w-[90%] mx-auto">
 
 {/* contaner from img */}
                <motion.div
                 initial={{ opacity: 0, scale:0}}  // état de départ
       animate={{ opacity: 1, scale:1}}    // état final
       transition={{ duration: 1 }}    // durée de l'animation
-               class="relative mb-20 rounded-[47%] md:w-2/4 ">
-  <div class="absolute bottom-0 h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
-      <img src={zoukiImage}  class="relative   z-20 md:w-100 w-[90%] h-100 rounded-[47%]" alt="zoukicode image"/>
+               class="relative mb-5 md:mb-20 rounded-[47%] md:w-2/4 ">
+  <div class="absolute bottom-0 h-90 md:h-90 w-[90%] md:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
+      <img src={zoukiImage}  class="relative object-cover  z-20 md:w-100 w-[90%] h-100 md:h-100 rounded-[47%]" alt="zoukicode image"/>
 </motion.div>
                <motion.div
       initial={{ opacity: 0 }}
@@ -146,7 +129,7 @@ export default function Header({Version, text, langue, setLangue }){
         transition={{ delay: 1.2, duration: 0.8 }}
         className="font-bold text-[50px]"
       >
-        Agrignan Marzouk
+        AGRIGNAN Marzouk
       </motion.div>
 
       <motion.div
