@@ -7,7 +7,7 @@ import { Propos } from './pages/Propos.jsx'
 import { Pied } from './pages/Pied.jsx'
 import { useRef, useState } from 'react'
 import Version from './pages/Langue'
-import { Router } from 'express'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {Dashboard} from './pages/Dashboard.jsx'
 function App() {
    const [langue, setLangue] = useState('FR');
