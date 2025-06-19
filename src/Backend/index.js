@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const saveContact = "INSERT INTO contacts (id,nom_client, sujet, email) VALUES (1,?,?,?)"
+const saveContact = "INSERT INTO contact (nom_client, sujet, email) VALUES (?,?,?)"
 
 //page d'acceuill du serveur
 app.get('/', (req, res) => {
