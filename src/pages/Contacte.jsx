@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion"
 import emailjs from "emailjs-com"
-import { useState, useRef, lazy } from "react"
+import { useState, useRef } from "react"
 
-export function Contact({text,langue,setlangue}) {
+export function Contact({ text, langue, setlangue }) {
   const idee = text.contact.paragraphe
   const splitchart = idee.split("")
 
@@ -10,19 +10,19 @@ export function Contact({text,langue,setlangue}) {
   const [sujet, setSujet] = useState("")
   const [email, setEmail] = useState("")
   const [notification, setNotification] = useState(null)
+  const [loading, setLoading] = useState(false) // 👈 état de chargement
 
   const form = useRef()
-
-
   const host = import.meta.env.VITE_API_URL
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (loading) return
+    setLoading(true)
 
     const message = { nom, email, sujet }
 
     try {
-      // 1. Enregistrement dans la base
       const res = await fetch(`${host}/api/contact`, {
         method: "POST",
         headers: {
@@ -36,51 +36,40 @@ export function Contact({text,langue,setlangue}) {
       if (!res.ok) {
         setNotification({
           type: "error",
-          message: ` Erreur : ${data.message}`,
+          message: `Erreur : ${data.message}`,
         })
         hideNotification()
+        setLoading(false)
         return
       }
 
-      // 2. Envoi via EmailJS
-      emailjs
-        .send(
-          "service_x359sh6", // Remplace par ton ID de service
-          "template_pxlfgkg", // Remplace par ton ID de template
-          {
-            name: nom,
-            email: email,
-            message: sujet,
-          },
-          "WJPecJrArBat35eH8" // Remplace par ta clé publique
-        )
-        .then(
-          () => {
-            setNotification({
-              type: "success",
-              message: "Message enregistré avec succès !",
-            })
-            setNom("")
-            setEmail("")
-            setSujet("")
-            hideNotification()
-          },
-          (error) => {
-            console.error(error)
-            setNotification({
-              type: "error",
-              message: "✅ Enregistré mais ❌ email non envoyé.",
-            })
-            hideNotification()
-          }
-        )
+      await emailjs.send(
+        "service_x359sh6",
+        "template_pxlfgkg",
+        {
+          name: nom,
+          email: email,
+          message: sujet,
+        },
+        "WJPecJrArBat35eH8"
+      )
+
+      setNotification({
+        type: "success",
+        message: "Message enregistré avec succès !",
+      })
+      setNom("")
+      setEmail("")
+      setSujet("")
     } catch (error) {
       console.error(error)
       setNotification({
         type: "error",
-        message: "Erreur de connexion au serveur",
+        message: "Erreur lors de l'envoi du message.",
       })
+    } finally {
       hideNotification()
+      setLoading(false)
     }
   }
 
@@ -147,15 +136,21 @@ export function Contact({text,langue,setlangue}) {
           value={sujet}
           onChange={(e) => setSujet(e.target.value)}
         />
-              <button
-          className="w-full h-12 bg-[#263b7a] rounded-md text-white"
+
+        <button
+          disabled={loading}
           type="submit"
+          className={`w-full h-12 rounded-md text-white flex items-center justify-center gap-2 transition-opacity ${
+            loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#263b7a]"
+          }`}
         >
-          {text.contact.submitbutton}
+          {loading && (
+            <span className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent" />
+          )}
+          {loading ? "Envoi..." : text.contact.submitbutton}
         </button>
       </form>
 
-      {/* Notification animée */}
       <AnimatePresence>
         {notification && (
           <motion.div
@@ -164,7 +159,7 @@ export function Contact({text,langue,setlangue}) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
-            className={`text-base fixed top-5 left-1/2 transform  text-center w-[90%] sm:w-[300px] -translate-x-1/2 px-6 py-3 rounded-lg shadow-md z-99 text-white ${
+            className={`text-base fixed top-5 left-1/2 transform text-center w-[90%] sm:w-[300px] -translate-x-1/2 px-6 py-3 rounded-lg shadow-md z-50 text-white ${
               notification.type === "success"
                 ? "bg-green-500"
                 : "bg-red-500"
