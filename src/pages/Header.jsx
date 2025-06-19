@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion } from "framer-motion";
-import zoukiImage from '/zouki-removebg-preview.png'
+import zoukiImage from '/WhatsApp_Image_2025-06-19_à_23.05.00_f5a10ba2-removebg-preview.png'
 import logo from '/logo.png'
 
 
@@ -97,7 +97,7 @@ export default function Header({Version, text, langue, setLangue }){
                 </div>
             </nav>
 
-            <div class="lg:flex-row flex justify-around flex-col  items-center h-[100%] w-[90%] mx-auto">
+            <div class="lg:flex-row flex  flex-col  items-center h-[100%] w-[90%] mx-auto">
 
 {/* contaner from img */}
                <motion.div
