@@ -97,17 +97,24 @@ export default function Header({Version, text, langue, setLangue }){
                 </div>
             </nav>
 
-            <div class="lg:flex-row flex  flex-col  items-center h-[100%] w-[90%] mx-auto">
+            <div class="lg:flex-row flex  flex-col justify-between mx-auto items-center h-[100%] w-[90%] ">
 
 {/* contaner from img */}
-               <motion.div
-                initial={{ opacity: 0, scale:0}}  // état de départ
-      animate={{ opacity: 1, scale:1}}    // état final
-      transition={{ duration: 1 }}    // durée de l'animation
-               class="relative mb-5 lg:mb-20 rounded-[47%] md:w-2/4 ">
-  <div class="absolute bottom-0 h-80 lg:h-90 w-[90%] lg:w-100 bg-cyan-400 opacity-20 rounded-[50%]"> </div>
-      <img src={zoukiImage}  class="relative object-cover  z-20 lg:w-100 w-[90%] h-90 lg:h-100 rounded-[47%]" alt="zoukicode image"/>
+    <motion.div 
+  initial={{ opacity: 0, scale: 0 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative   w-full max-w-md  rounded-[47%] overflow-hidden"
+>
+  <div className="absolute bottom-0 w-full h-3/4 bg-cyan-400 opacity-20 rounded-full"></div>
+
+  <img 
+    src={zoukiImage} 
+    alt="zoukicode image"
+    className="relative  w-full h-auto object-cover rounded-[47%]" 
+  />
 </motion.div>
+
                <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
