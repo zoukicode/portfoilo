@@ -11,14 +11,14 @@ export function Projets({ text, langue, setLangue }) {
       nom: "SAMANEA HILL",
       description: " Tableau de bord intelligent destiné aux professionnels de l'immobilier, conçu pour optimiser la gestion des leads, le suivi des ventes et la performance des campagnes marketing. .",
       lien:"https://dashboard-apparte.vercel.app/",
-      gitup:""
+      gitup:"https://github.com/zoukicode/dashboard-apparte"
     },
     {
       img: FeminiteImg,
       nom: "Féminité Sans Abri",
       description: "SIte web de Féminité Sans Abri  qui lutte contre la précarité hygiénique chez les femmes sans domicile ou en grande difficulté..",
       lien:"https://zoukicode.vercel.app/",
-      gitup:""
+      gitup:"https://github.com/zoukicode/Feminite"
     },
     ];
 
